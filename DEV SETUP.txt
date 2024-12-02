@@ -1,0 +1,78 @@
+
+
+
+
+Install putty SSH client
+Connect
+login: robot, pass: maker
+
+
+https://developers.google.com/machine-learning/crash-course/ml-intro
+
+https://python-ev3dev.readthedocs.io/en/ev3dev-stretch/
+
+https://www.balena.io/etcher/EV3 Networking
+
+
+
+https://www.ev3dev.org/docs/networking/
+
+Connecting ev3 to internet(ONLINE STATUS)
+https://www.ev3dev.org/docs/tutorials/connecting-to-the-internet-via-usb/
+
+sudo apt update
+sudo apt upgrade
+sudo apt-get install python3-pip
+sudo apt-get install python3-pil
+sudo python3 -m easy_install python-ev3dev
+
+
+#on evdev device
+sudo pip3 install rpyc==4.1.5
+
+
+RPYC for remote communication
+install on EV3
+https://python-ev3dev.readthedocs.io/en/ev3dev-stretch/rpyc.html
+
+
+
+echo "[Unit]
+Description=RPyC Classic Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rpyc_classic.py
+
+[Install]
+WantedBy=multi-user.target" > rpyc-classic.service
+
+sudo cp rpyc-classic.service /lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable rpyc-classic.service
+sudo systemctl start rpyc-classic.service
+
+// PC SETUP
+install on PC anaconda environment
+pip install rpyc==4.1.5
+
+
+
+run rpyc server on ev3dev
+/usr/bin/rpyc_classic.py --host 169.254.9.252
+
+In anaconda create ENVIRONMENT with python 3.8
+conda install matplotlib
+pip install tensorflow  (version 2.4.1)
+
+Library for access webcam and other visual tools
+pip install opencv-python
+
+For the IDE (integrated development environment) install jupyter lab. 
+To do this open anaconda navigator click on home > make sure application son(your dev environment
+
+
+
+
+https://www.youtube.com/watch?v=aircAruvnKk
